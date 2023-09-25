@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kalkulator</title>
+    <script>
+        function tambah() {
+            let a = document.getElementById("bilangan1").value;
+            let b = document.getElementById("bilangan2").value;
+            document.getElementById("hasil").value = parseInt(a) + parseInt(b);
+        }
+
+        function kurang() {
+            let a = document.getElementById("bilangan1").value;
+            let b = document.getElementById("bilangan2").value;
+            document.getElementById("hasil").value = parseInt(a) - parseInt(b);
+        }
+
+        function kali() {
+            let a = document.getElementById("bilangan1").value;
+            let b = document.getElementById("bilangan2").value;
+            document.getElementById("hasil").value = parseInt(a) * parseInt(b);
+        }
+
+        function bagi() {
+            let a = document.getElementById("bilangan1").value;
+            let b = document.getElementById("bilangan2").value;
+            document.getElementById("hasil").value = parseInt(a) / parseInt(b);
+        }
+        function pangkat() {
+            let a = document.getElementById("bilangan1").value;
+            let b = document.getElementById("bilangan2").value;
+            document.getElementById("hasil").value = parseInt(a) ** parseInt(b);
+        }
+
+
+        function cekAngka() {
+            conts bil1 = document.getElementById("bilangan1").value;
+            const bil2 = document.getElementById("bilangan2").value;
+
+            if (bil1 < bil2) {
+                document.getElementById("output").innerHTML = bil1 + ""
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <table style="width : 100%;"> 
+        <tr>
+            <td>
+                <label for="bilangan1">bilangan1</label>
+                <br />
+                <input type="text" id="bilangan1" />
+            </td>
+            <td>
+                <label for="bilangan2">bilangan2</label>
+                <br />
+                <input type="text" id="bilangan2" />
+            </td>
+            <td>
+                <label for="hasil">hasil</label>
+                <br />
+                <input type="text" id="hasil" />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table style="width :100%;">
+        <tr>
+            <td>
+                <input type="button" id="jumlah" value="+" style="width: 100%; " onclick="tambah();" />
+            </td>
+            <td>
+                <input type="button" id="kurang" value="-" style="width: 100%;" onclick="kurang();" />
+            </td>
+            <td>
+                <input type="button" id="kali" value="x" style="width: 100%;" onclick="kali();" />
+            </td>
+            <td>
+                <input type="button" id="bagi" value=":" style="width: 100%;" onclick="bagi();" />
+            </td>
+            <td>
+                <input type="button" id="pangkat" value="^" style="width: 100%;" onclick="pangkat();" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
